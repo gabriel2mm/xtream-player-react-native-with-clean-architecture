@@ -1,0 +1,32 @@
+<ng-container>
+    <div class="h-full rounded-lg shadow-lg overflow-y-scroll p-4 scroll-container-content">
+
+        <p class="text-center py-4 font-semibold text-white text-lg mb-5 rounded-lg">Canais</p>
+
+        <div class="grid grid-cols-4 grid-rows-1 gap-8" [class.gap-10]="isLoading">
+
+            <ng-container *ngIf="!isLoading">
+                <ng-container *ngFor="let content of contents; let i = index; let isLast = last">
+                    <div class="w-full h-24 bg-black rounded-lg shadow-xl cursor-pointer" [tabindex]="2000 + content.num" (click)="onContentSelect(content, $event)">
+                        <div class="h-full w-full flex flex-row justify-center items-center gap-4 overflow-hidden p-4 relative">
+                            <div class="h-full w-full">
+                                <img [src]="content.stream_icon" [alt]="'titulo'+content.name" class="object-cover object-center bg-no-repeat h-full w-full" draggable="false"/>
+                            </div>
+                            <div class="absolute inset-0 h-full w-full bg-black bg-opacity-60"></div>
+                            <div class="absolute inset-0 h-full w-full bg-transparent flex flex-row justify-center items-center">
+                                <p class="text-white text-center text-lg font-semibold drop-shadow-lg" style="max-width: 100%; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">{{content.name}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="isLoading">
+                <ng-container *ngFor="let content of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]; let i = index; let isLast = last">
+                    <div class="w-full h-24 bg-black rounded-lg shadow-lg cursor-pointer" skeleton [skeletonLoading]="isLoading" skeletonWidth="100%" skeletonHeight="10vh"></div>
+                </ng-container>
+            </ng-container>
+
+        </div>
+    </div>
+</ng-container>

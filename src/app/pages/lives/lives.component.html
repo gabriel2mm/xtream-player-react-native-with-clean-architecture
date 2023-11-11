@@ -1,0 +1,15 @@
+<content-layout>
+    <div class="h-screen grid grid-rows-1 grid-cols-4 gap-2 overflow-auto">
+        <app-category-list [categories]="categories" [isLoading]="isLoadingCategory" (SelectedCategory)="onSelectCategory($event)"></app-category-list>
+        <app-content-list 
+            title="Canais" 
+            [contents]="contents" 
+            [isLoading]="isLoadingContent" 
+            class="w-full" 
+            [class.col-span-3]="!contentSelected"
+            [class.col-span-2]="!!contentSelected"
+            (onSelectContent)="onContentSelected($event)"></app-content-list>
+        
+        <app-live-info class="col-start-4" [liveInfo]="contentSelected" *ngIf="!!contentSelected"></app-live-info>
+    </div>
+</content-layout>

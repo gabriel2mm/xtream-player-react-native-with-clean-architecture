@@ -1,0 +1,30 @@
+<ng-container *ngIf="categories">
+
+    <div class="h-full bg-black rounded-lg shadow-lg overflow-y-scroll p-4 scroll-container-content scroll-container">
+        <p class="text-center py-4 font-semibold text-white text-lg mb-5 rounded-lg">Categorias</p>
+
+        <ng-container *ngIf="!isLoading">
+            <ng-container *ngFor="let category of categories; let i = index; let isLast = last">
+                <div [tabIndex]="10 + i"
+                    class="flex flex-col cursor-pointer hover:bg-gray-800 focus:bg-gray-800 my-2 mx-1 rounded-md focus:shadow-lg hover:shadow-lg"
+                    (click)="onSelectCategory(category, $event)">
+                    <p class="py-4 px-2 text-center text-white text-lg font-medium">{{ category.category_name }}</p>
+                </div>
+                <hr role="separator" class="border-t-2 border-solid border-gray-800 h-2" *ngIf="!isLast" />
+            </ng-container>
+        </ng-container>
+
+
+        <ng-container *ngIf="isLoading">
+            <div class="flex flex-col gap-10">
+                <ng-container *ngFor="let category of [1,2,3,4,5,6,7,8,9,10]; let i = index; let isLast = last">
+                    <div skeleton [skeletonLoading]="isLoading" skeletonWidth="100%" skeletonHeight="7vh"
+                        class="flex flex-col cursor-pointer hover:bg-gray-800 focus:bg-gray-800 mb-10 rounded-md focus:shadow-lg hover:shadow-lg">
+                    </div>
+                </ng-container>
+            </div>
+        </ng-container>
+
+    </div>
+
+</ng-container>

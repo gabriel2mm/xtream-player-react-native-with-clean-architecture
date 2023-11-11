@@ -1,0 +1,48 @@
+<ng-container *ngIf="!!featuredVod">
+    <div class="relative h-full">
+        <img 
+            loading="lazy"
+            draggable="false" 
+            [src]="featuredVod?.info?.backdrop_path[0]"
+            [alt]="'Imagem do filme' + featuredVod?.title" 
+            class="h-full rounded-lg w-1/3 object-cover bg-no-repeat" 
+        />
+
+        <div class="absolute inset-0 bg-gradient-to-l from-black via-transparent to-transparent opacity-100 w-1/3"></div>
+
+        <div class="absolute right-10 top-5 flex flex-col items-end justify-center">
+
+            <h1 class="text-white text-2xl font-medium text-right">{{featuredVod?.info?.name | titlecase}}</h1>
+
+            <div class="flex flex-row gap-4 justify-center items-end">
+                <div class="mt-1 flex flex-row gap-2 justify-center">
+                    <mat-icon class="text-gray-400">calendar_month</mat-icon>
+                    <span class="text-gray-400 font-thin text-right">{{featuredVod?.info?.releasedate | date: 'yyyy'}} </span> 
+               </div>
+               
+               <div class="flex flex-row gap-2 justify-center">
+                    <mat-icon class="text-gray-400">schedule</mat-icon>
+                    <span class="text-gray-400 font-thin text-right">{{featuredVod?.info?.duration | duration }} minuto(s) </span> 
+                </div>
+
+                <div class="flex flex-row gap-2 justify-center">
+                    <mat-icon class="text-gray-400">star</mat-icon>
+                    <span class="text-gray-400 font-thin text-right">{{featuredVod?.info?.rating}}</span>
+                </div>
+            </div>
+
+            <div class="w-1/2 block overflow-hidden relative">
+                <p class="mt-2 text-white text-right text-lg overflow-ellipsis" 
+                    style="max-width: 100%; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                    {{ featuredVod?.info?.description }}
+                </p>
+            </div>
+
+            <div class="mt-2 flex flex-col justify-center items-end">
+                <p class="text-gray-400 font-thin text-right"><b>Diretor</b>: {{featuredVod?.info?.director}}</p>
+                <p class="text-gray-400 font-thin text-right"><b>Elenco</b>: {{featuredVod?.info?.actors}}</p>
+            </div>
+            
+        </div>
+    </div>
+</ng-container>

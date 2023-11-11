@@ -1,0 +1,35 @@
+<content-layout *ngIf="userInfo$ | async as accountInfo">
+    <div class="container mx-auto h-full flex flex-row justify-center items-center">
+        <div class="logo p-4 border-gray-200 border-r-2 border-solid mr-10 pr-10">
+            <div class="logo">
+                <h1 class="text-red-600 font-black text-6xl uppercase">SammyFlix</h1>
+                <span class="text-gray-500">&copy; 2024 - V.{{appVersion.VERSION}}</span>
+            </div>
+        </div>
+        <div class="infos p-6 flex flex-col justify-center">
+            <span class="text-3xl text-white font-semibold">Informações da conta</span>
+            <div class="info-1 flex flex-col gap-2 my-4">
+                <span class="text-white text-xl font-medium">Portal URL: <small
+                        class="text-lg text-gray-400">{{accountInfo?.loginInfo?.url}}</small></span>
+                <span class="text-white text-xl font-medium">Username: <small
+                        class="text-lg text-gray-400">{{accountInfo?.accountInfo?.user_info?.username}}</small></span>
+                <span class="text-white text-xl font-medium">Password: <small
+                        class="text-lg text-gray-400">{{accountInfo?.accountInfo?.user_info?.password}}</small></span>
+                <span class="text-white text-xl font-medium">Data de criação: <small
+                        class="text-lg text-gray-400">{{accountInfo?.accountInfo?.user_info?.created_at }}</small></span>
+                <span class="text-white text-xl font-medium">Data de expiração: <small
+                        class="text-lg text-gray-400">{{accountInfo?.accountInfo?.user_info?.exp_date}}</small></span>
+                <span class="text-white text-xl font-medium">Máximo de conexões: <small
+                        class="text-lg text-gray-400">{{accountInfo?.accountInfo?.user_info?.max_connections}}</small></span>
+                <span class="text-white text-xl font-medium">Status: <small
+                        class="text-lg text-gray-400">{{accountInfo?.accountInfo?.user_info?.status}}</small></span>
+            </div>
+            <button mat-raised-button color="warn" (click)="onExit()">
+                <div class="flex flex-row justify-center items-center gap-2">
+                    <span>Sair</span>
+                    <app-icon className="order-2" icon="logout"></app-icon>
+                </div>
+            </button>
+        </div>
+    </div>
+</content-layout>

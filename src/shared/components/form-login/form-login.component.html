@@ -1,0 +1,41 @@
+<form [formGroup]="formGroup" class="form my-5 flex flex-col gap-2 w-full">
+    <mat-form-field tabindex="-1">
+        <mat-label>URL</mat-label>
+        <input type="url" matInput formControlName="url" placeholder="Informe a URL da lista" pattern="" />
+        <mat-error *ngIf="formGroup.controls['url'].hasError('required')">
+            O campo URL é Obrigatório.
+        </mat-error>
+        <mat-error *ngIf="formGroup.controls['url'].hasError('pattern')">
+            O campo URL está inválido.
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field tabindex="-1">
+        <mat-label>Usuário</mat-label>
+        <input type="text" matInput formControlName="username" placeholder="Informe seu usuário" />
+        <mat-error *ngIf="formGroup.controls['username'].hasError('required')">
+            O campo usuário é Obrigatório.
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field tabindex="-1">
+        <mat-label>Senha</mat-label>
+        <input [type]="hidePassoword ? 'password' : 'text'" matInput formControlName="password"
+            placeholder="Informe sua senha" />
+        <mat-icon matSuffix (click)="hidePassoword = !hidePassoword" (keypress)="hidePassoword = !hidePassoword"
+            tabindex="-1">
+            {{ hidePassoword ? 'visibility' : 'visibility_off' }}
+        </mat-icon>
+        <mat-error *ngIf="formGroup.controls['password'].hasError('required')">
+            O campo senha é Obrigatório.
+        </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="warn" (click)="onContinue($event)" tabindex="-1"
+        [disabled]="formGroup.invalid || loading">
+        <div *ngIf="!loading" class="flex flex-row items-center justify-center gap-2">
+            <span class="text-lg font-medium">Entrar</span>
+            <mat-icon class="order-2">send</mat-icon>
+        </div>
+        <div *ngIf="loading" class="w-full flex justify-center items-center">
+            <app-progress diameter="20"></app-progress>
+        </div>
+    </button>
+</form>

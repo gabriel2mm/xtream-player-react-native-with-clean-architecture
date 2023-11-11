@@ -1,0 +1,50 @@
+<div [class.h-[75%]]="vods.length == 0">
+    <h1 class="mb-8 text-lg text-white font-bold">Filmes adicionados recentemente</h1>
+
+    <ng-container *ngIf="!!vods && vods.length > 0">
+        <div class="items h-full w-full flex flex-row justify-center gap-x-8 overflow-x-auto">
+            <ng-container *ngFor="let vod of vods; let i = index">
+                <div 
+                    id="featured-vod__div--vods"
+                    [tabindex]=" 16 + i"
+                    class="w-[50rem] h-80 bg-black rounded-lg shadow-xl overflow-hidden relative cursor-pointer">
+               
+                    <img 
+                        loading="lazy"
+                        draggable="false" 
+                        [alt]="'Imagem do filme' + vod?.title"
+                        [src]="vod?.stream_icon" 
+                        class="w-full h-full object-cover" 
+                    />
+
+                    <div class="absolute top-0 bg-black opacity-70 h-full w-full"></div>
+                    <div class="infos absolute bottom-10 flex flex-row justify-center items-center w-full py-1 ">
+                        <span class="text-white font-medium text-center text-xl">{{vod?.name}}</span>
+                    </div>
+
+                    <div class="absolute right-2 top-2 text-lg text-white flex flex-row justify-center">
+                        <mat-icon>star</mat-icon>
+                        <p class="text-lg">{{ vod.rating }}</p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="vods.length <= 0">
+        <div class="h-full w-full flex flex-row justify-center gap-x-8 overflow-x-auto">
+            <ng-container *ngFor="let vod of [1, 2, 3, 4, 5, 6]; let i = index">
+                <div 
+                    id="featured-vod__div--skeleton"
+                    skeleton
+                    [skeletonLoading]="true" 
+                    skeletonWidth="100%" 
+                    skeletonHeight="100%" 
+                    [tabindex]=" 16 + i"
+                    class="w-[50rem] h-80 bg-black rounded-lg shadow-xl overflow-hidden relative cursor-pointer">
+                </div>
+            </ng-container>
+        </div>
+    </ng-container>
+
+</div>

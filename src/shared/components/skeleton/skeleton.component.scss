@@ -1,0 +1,33 @@
+:host{ 
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    width: var(--skeleton-width);
+    height: var(--skeleton-height);
+
+    background: rgba(227,227,227,0.1);
+
+    &::after{
+        content: '';
+        position: absolute;
+        background-image: linear-gradient(90deg, 
+            rgba(227,227,227,0),
+            rgba(227,227,227,0.1),
+            rgba(227,227,227,0) 
+        );
+        animation: animation-trasaction 1300ms ease-in-out infinite;
+        width: 200%;
+        height: 100%;
+    }
+
+    @keyframes animation-trasaction {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100%{
+            transform: translateX(100%);
+        }
+    }
+}

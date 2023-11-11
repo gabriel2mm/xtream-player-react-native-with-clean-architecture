@@ -1,0 +1,19 @@
+<content-layout *ngIf="vods$ | async as vods">
+    <div class="h-1/4 w-full rounded-lg bg-black shadow-lg" tabindex="10">
+        <app-featured-vod [featuredVod]="featuredVod" skeleton [skeletonLoading]="isLoading || !featuredVod" skeletonWidth="100%" skeletonHeight="100%"></app-featured-vod>
+    </div>
+    <div class="h-1/4 w-full">
+        <h1 class="my-8 text-lg text-white font-bold">Últimos canais assistidos</h1>
+        <div class="items flex flex-row items-center justify-center gap-x-8">
+            <div class="w-1/6 h-24 bg-black rounded-lg shadow-lg" tabindex="11"></div>
+            <div class="w-1/6 h-24 bg-black rounded-lg shadow-lg" tabindex="12"></div>
+            <div class="w-1/6 h-24 bg-black rounded-lg shadow-lg" tabindex="13"></div>
+            <div class="w-1/6 h-24 bg-black rounded-lg shadow-lg" tabindex="14"></div>
+            <div class="w-1/6 h-24 bg-black rounded-lg shadow-lg" tabindex="15"></div>
+            <div class="w-1/6 h-24 bg-black rounded-lg shadow-lg" tabindex="16"></div>
+        </div>
+    </div>
+    <div class="h-2/4 w-full">
+        <app-recently-added [vods]="vods"></app-recently-added>
+    </div>
+</content-layout>

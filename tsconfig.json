@@ -2,7 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -22,7 +22,23 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+        "@components/*":["./src/shared/components/*"],
+        "@directives/*": ["./src/shared/directives/*"],
+        "@constants/*" : ["./src/shared/constants/*"],
+        "@pipes/*": ["./src/shared/pipes/*"],
+        "@services/*": ["./src/shared/services/*"],
+        "@layouts/*": ["./src/shared/layouts/*"],
+        "@guards/*": ["./src/shared/guards/*"],
+        "@enums/*":["./src/shared/enums/*"],
+        "@pages/*":["./src/app/pages/*"],
+        "@models/*": ["./src/shared/models/*"],
+        "@actions/*": ["./src/app/common/actions/*"],
+        "@reducers/*": ["./src/app/common/reducers/*"],
+        "@effects/*": ["./src/app/common/effects/*"],
+        "@types/*": ["./src/app/common/types"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

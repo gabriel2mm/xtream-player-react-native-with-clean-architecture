@@ -1,0 +1,45 @@
+<div class="fixed z-50 bg-black h-full w-16 flex flex-col justify-center items-center focus:w-60 hover:w-60 focus-within:w-60 group transition-all ease-in-out delay-50 shadow-xl"
+    tabindex="1">
+    <div class="flex flex-col justify-center gap-6">
+        <div class="flex flex-row gap-2 items-center h-10 group p-2 cursor-pointer" tabindex="2">
+            <app-icon icon="search" className="text-gray-400 pt-1 group-focus:text-gray-200 group-hover:text-gray-200"></app-icon>
+            <span
+                class="label-menu text-gray-400 hidden group-focus:block group-hover:block group-focus-within:block font-medium group-focus:text-gray-200 group-hover:text-gray-200">Buscar</span>
+        </div>
+        <div class="flex flex-row gap-2 items-center h-10 group p-2 cursor-pointer" tabindex="3" (click)="goTo(routes.HOME.redirect)">
+            <app-icon icon="home" className="text-gray-400 pt-1 group-focus:text-gray-200 group-hover:text-gray-200"></app-icon>
+            <span
+                class="label-menu text-gray-400 hidden group-focus:block group-hover:block group-focus-within:block font-medium group-focus:text-gray-200 group-hover:text-gray-200">Início</span>
+        </div>
+        <div class="flex flex-row gap-2 items-center h-10 group p-2 cursor-pointer" tabindex="4" (click)="goTo(routes.LIVES.redirect)">
+            <app-icon icon="tv" className="text-gray-400 pt-1 group-focus:text-gray-200 group-hover:text-gray-200"></app-icon>
+            <span
+                class="label-menu text-gray-400 hidden group-focus:block group-hover:block group-focus-within:block font-medium group-focus:text-gray-200 group-hover:text-gray-200">Live</span>
+        </div>
+        <div class="flex flex-row gap-2 items-center h-10 group p-2 cursor-pointer" tabindex="5">
+            <app-icon icon="movie" className="text-gray-400 pt-1 group-focus:text-gray-200 group-hover:text-gray-200"></app-icon>
+            <span
+                class="label-menu text-gray-400 hidden group-focus:block group-hover:block group-focus-within:block font-medium group-focus:text-gray-200 group-hover:text-gray-200">Filmes</span>
+        </div>
+        <div class="flex flex-row gap-2 items-center h-10 group p-2 cursor-pointer" tabindex="6">
+            <app-icon icon="smart_display" className="text-gray-400 pt-1 group-focus:text-gray-200 group-hover:text-gray-200"></app-icon>
+            <span
+                class="label-menu text-gray-400 hidden group-focus:block group-hover:block group-focus-within:block font-medium group-focus:text-gray-200 group-hover:text-gray-200">Series</span>
+        </div>
+        <div class="flex flex-row gap-2 items-center h-10 group p-2 cursor-pointer" tabindex="7">
+            <app-icon icon="favorite" className="text-gray-400 pt-1 group-focus:text-gray-200 group-hover:text-gray-200"></app-icon>
+            <span
+                class="label-menu text-gray-400 hidden group-focus:block group-hover:block group-focus-within:block font-medium group-focus:text-gray-200 group-hover:text-gray-200">Favoritos</span>
+        </div>
+        <div class="flex flex-row gap-2 items-center h-10 group p-2 cursor-pointer" tabindex="8" (click)="goTo(routes.ACCOUNT.redirect)">
+            <app-icon icon="person" className="text-gray-400 pt-1 group-focus:text-gray-200 group-hover:text-gray-200"></app-icon>
+            <span
+                class="label-menu text-gray-400 hidden group-focus:block group-hover:block group-focus-within:block font-medium group-focus:text-gray-200 group-hover:text-gray-200">Conta</span>
+        </div>
+        <div class="flex flex-row gap-2 items-center h-10 group p-2 cursor-pointer" tabindex="8" (click)="exit()">
+            <app-icon icon="logout" className="text-gray-400 pt-1 group-focus:text-gray-200 group-hover:text-gray-200"></app-icon>
+            <span
+                class="label-menu text-gray-400 hidden group-focus:block group-hover:block group-focus-within:block font-medium group-focus:text-gray-200 group-hover:text-gray-200">Sair</span>
+        </div>
+    </div>
+</div>

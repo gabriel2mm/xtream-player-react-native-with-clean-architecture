@@ -1,0 +1,17 @@
+.scroll-container {
+    overflow-y: scroll; /* Adicione a rolagem vertical */
+  }
+  
+  /* Estilize a barra de rolagem como desejado */
+  .scroll-container::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
