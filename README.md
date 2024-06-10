@@ -1,50 +1,53 @@
-# Welcome to your Expo app 👋
+# IPTV Stream Code Reader
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+IPTV Stream Code Reader is an application built with React Native specifically for Android TVs. It allows users to read and access IPTV stream codes conveniently. The application is developed using clean architecture principles and various design patterns, ensuring modularity, scalability, and maintainability of the codebase. Additionally, it incorporates unit and integration testing practices following the Test-Driven Development (TDD) approach.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Scan and read IPTV stream codes.
+- Access IPTV streams directly from the application.
+- Clean and modular architecture.
+- Test-driven development approach for robustness and reliability.
+- Compatible with Android TVs for seamless integration.
 
-   ```bash
-   npm install
-   ```
+## Getting Started
 
-2. Start the app
+Follow these steps to get started with the IPTV Stream Code Reader application:
 
-   ```bash
-    npx expo start
-   ```
+1. **Clone the Repository**: Clone the repository to your local machine using the following command:
 
-In the output, you'll find options to open the app in a
+    ```bash
+    git clone https://github.com/your-username/iptv-stream-code-reader.git
+    ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+2. **Install Dependencies**: Navigate to the project directory and install the necessary dependencies using npm or yarn:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+    ```bash
+    cd iptv-stream-code-reader
+    npm install
+    ```
 
-## Get a fresh project
+    or
 
-When you're ready, run:
+    ```bash
+    cd iptv-stream-code-reader
+    yarn install
+    ```
 
-```bash
-npm run reset-project
-```
+3. **Run the Application**: Run the application on your Android TV device using the following command:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+    ```bash
+    npx react-native run-android
+    ```
 
-## Learn more
+    Make sure you have set up your development environment for React Native and Android properly.
 
-To learn more about developing your project with Expo, look at the following resources:
+## Contributing
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Contributions are welcome! If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request. 
 
-## Join the community
+Before contributing, please make sure to read our [Contribution Guidelines](CONTRIBUTING.md).
 
-Join our community of developers creating universal apps.
+## License
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
