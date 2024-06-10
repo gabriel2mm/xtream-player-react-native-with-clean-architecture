@@ -1,36 +1,36 @@
-# IPTV Stream Code Reader
+# Xtream player - Stream Code Reader
 
-IPTV Stream Code Reader is an application built with React Native specifically for Android TVs. It allows users to read and access IPTV stream codes conveniently. The application is developed using clean architecture principles and various design patterns, ensuring modularity, scalability, and maintainability of the codebase. Additionally, it incorporates unit and integration testing practices following the Test-Driven Development (TDD) approach.
+Xtream Code Reader is an application built with React Native specifically for Android TVs. It allows users to read and access stream codes conveniently. The application is developed using clean architecture principles and various design patterns, ensuring modularity, scalability, and maintainability of the codebase. Additionally, it incorporates unit and integration testing practices following the Test-Driven Development (TDD) approach.
 
 ## Features
 
-- Scan and read IPTV stream codes.
-- Access IPTV streams directly from the application.
+- Scan and read stream codes.
+- Access streams directly from the application.
 - Clean and modular architecture.
 - Test-driven development approach for robustness and reliability.
 - Compatible with Android TVs for seamless integration.
 
 ## Getting Started
 
-Follow these steps to get started with the IPTV Stream Code Reader application:
+Follow these steps to get started with the Stream Code Reader application:
 
 1. **Clone the Repository**: Clone the repository to your local machine using the following command:
 
     ```bash
-    git clone https://github.com/your-username/iptv-stream-code-reader.git
+    git clone https://github.com/gabriel2mm/xtream-player-react-native-with-clean-architecture.git
     ```
 
 2. **Install Dependencies**: Navigate to the project directory and install the necessary dependencies using npm or yarn:
 
     ```bash
-    cd iptv-stream-code-reader
+    cd xtream-player-react-native-with-clean-architecture
     npm install
     ```
 
     or
 
     ```bash
-    cd iptv-stream-code-reader
+    cd xtream-player-react-native-with-clean-architecture
     yarn install
     ```
 
