@@ -12,14 +12,14 @@ export default class GetCategories implements IUseCase<ActionEnum, Category[]> {
 	/**
 	 * Creates an instance of the GetCategories use case.
 	 * @param categoryService The service responsible for category-related operations.
-	 */
+	 * */
 	constructor(readonly categoryService: ICategoryService) { }
 
 	/**
 	 * Executes the retrieval of categories based on the specified action.
 	 * @param action The action for which categories need to be retrieved.
 	 * @returns An array of categories associated with the specified action.
-	 */
+	 * */
 	execute(action: ActionEnum): Promise<Category[]> {
 		return this.categoryService.getCategoriesByAction(action);
 	}

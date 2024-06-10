@@ -10,16 +10,16 @@ import Account from "@core/domain/entity/account";
 export default class Sigin implements IUseCase<LoginParams, Account> {
 
 	/**
-	* Creates an instance of the Sigin use case.
-	* @param accountService The service responsible for user account-related operations.
-	*/
+	 * Creates an instance of the Sigin use case.
+	 * @param accountService The service responsible for user account-related operations.
+	 * */
 	constructor(readonly accountService: IAccountService) { }
 
 	/**
-	* Executes the sign-in process using the provided login information.
-	* @param loginInfo The login information containing URL, username, and password.
-	* @returns The account information upon successful sign-in.
-	*/
+	 * Executes the sign-in process using the provided login information.
+	 * @param loginInfo The login information containing URL, username, and password.
+	 * @returns The account information upon successful sign-in.
+	 * */
 	async execute(loginInfo: LoginParams): Promise<Account> {
 		return await this.accountService.login(loginInfo.url, loginInfo.username, loginInfo.password);
 	}

@@ -22,13 +22,13 @@ export default class AccountService implements IAccountService {
 	constructor(private readonly http: IHttpClient, private readonly httpCacheClient: IHttpCacheClient) { }
 
 	/**
-	* Logs in the user and returns the account information.
-	* @param url - The base URL for the login request.
-	* @param username - The username of the account.
-	* @param password - The password of the account.
-	* @throws LoginFailureException if the login fails.
-	* @returns The account information.
-	* */
+	 * Logs in the user and returns the account information.
+	 * @param url - The base URL for the login request.
+	 * @param username - The username of the account.
+	 * @param password - The password of the account.
+	 * @throws LoginFailureException if the login fails.
+	 * @returns The account information.
+	 * */
 	async login(url: string, username: string, password: string) {
 		if (!url || !username || !password)
 			throw new ParametersInvalidException("Login parameters invalid");

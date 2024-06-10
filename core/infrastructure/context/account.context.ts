@@ -15,18 +15,18 @@ export default class AccountContext {
 	private constructor() { }
 
 	/**
-		* Returns the Singleton instance of AccountContext.
-		* @returns The Singleton instance of AccountContext.
-	*/
+	 * Returns the Singleton instance of AccountContext.
+	 * @returns The Singleton instance of AccountContext.
+	 * */
 	static getInstance(): AccountContext {
 		if (!this.instance) this.instance = new AccountContext();
 		return this.instance as AccountContext;
 	}
 
 	/**
-	* Sets the account in the current context.
-	* @param account The account to set.
-	*/
+	 * Sets the account in the current context.
+	 * @param account The account to set.
+	 * */
 	setAccount(account: Account): void {
 		if (!account)
 			throw new AccountMustBeProvidedException();
@@ -37,7 +37,7 @@ export default class AccountContext {
 	 * Returns the account from the current context.
 	 * @returns The account from the current context, or undefined if not set.
 	 * @throws AccountNotFoundException if the account is not set.
-	 */
+	 * */
 	getAccount(): Account | undefined {
 		return this.account;
 	}

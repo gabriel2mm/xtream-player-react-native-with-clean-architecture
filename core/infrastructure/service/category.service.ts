@@ -15,7 +15,7 @@ export default class CategoryService implements ICategoryService {
 	 * Creates an instance of CategoryService.
 	 * @param http The HTTP client used for making requests.
 	 * @param httpCacheClient The HTTP cache client used for caching requests.
-	 */
+	 * */
 	constructor(
 		private readonly http: IHttpClient,
 		private readonly httpCacheClient: IHttpCacheClient

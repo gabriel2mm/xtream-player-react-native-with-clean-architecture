@@ -25,7 +25,7 @@ export class ServiceFactory implements IServiceFactory {
 	 * Private constructor to prevent external instantiation.
 	 * @param http The HTTP client used by the services.
 	 * @param httpCache The HTTP cache client used by the services.
-	 */
+	 * */
 	private constructor(http: IHttpClient, httpCache: IHttpCacheClient) {
 		this.http = http;
 		this.httpCache = httpCache;
@@ -33,12 +33,12 @@ export class ServiceFactory implements IServiceFactory {
 	}
 
 	/**
-	* Gets the singleton instance of the ServiceFactory.
-	* If no instance exists, creates a new one.
-	* @param http The HTTP client to use. Defaults to a new instance of HttpAdapter.
-	* @param httpCache The HTTP cache client to use. Defaults to a new instance of HttpCacheAdapter.
-	* @returns The singleton instance of ServiceFactory.
-	*/
+	 * Gets the singleton instance of the ServiceFactory.
+	 * If no instance exists, creates a new one.
+	 * @param http The HTTP client to use. Defaults to a new instance of HttpAdapter.
+	 * @param httpCache The HTTP cache client to use. Defaults to a new instance of HttpCacheAdapter.
+	 * @returns The singleton instance of ServiceFactory.
+	 * */
 	static getInstance(http: IHttpClient = new HttpAdapter(), httpCache: IHttpCacheClient = new HttpCacheAdapter()): ServiceFactory {
 		if (!this.instance) {
 			this.instance = new ServiceFactory(http, httpCache);
@@ -47,9 +47,9 @@ export class ServiceFactory implements IServiceFactory {
 	}
 
 	/**
-	* Creates an instance of AccountService using the configured HTTP client and cache client.
-	* @returns An instance of AccountService.
-	*/
+	 * Creates an instance of AccountService using the configured HTTP client and cache client.
+	 * @returns An instance of AccountService.
+	 * */
 	createAccountService(): IAccountService {
 		return new AccountService(this.http, this.httpCache);
 	}
@@ -57,7 +57,7 @@ export class ServiceFactory implements IServiceFactory {
 	/**
 	 * Creates an instance of CategoryService using the configured HTTP client and cache client.
 	 * @returns An instance of CategoryService.
-	 */
+	 * */
 	createCategoryService(): ICategoryService {
 		return new CategoryService(this.http, this.httpCache);
 	}

@@ -17,7 +17,7 @@ export default class HttpCacheAdapter implements IHttpCacheAdapter {
 	 * @param queryFn The function to execute for the query.
 	 * @param params Optional parameters for the query.
 	 * @returns A Promise resolving to the query result.
-	 */
+	 * */
 	useQuery<T>(queryKey: any, queryFn: QueryFunction, params?: any): Promise<T> {
 		const queryClient = ReactQueryFactory.getInstance();
 		return queryClient.fetchQuery({ queryKey: [queryKey], queryFn, retry: this.RETRY_ATTEMPT, staleTime: this.CACHE_EXP_IN_MILIS });
@@ -26,15 +26,15 @@ export default class HttpCacheAdapter implements IHttpCacheAdapter {
 	/**
 	 * Sets the number of retry attempts for cached queries.
 	 * @param retry The number of retry attempts to set.
-	 */
+	 * */
 	setRetryAttempt(retry: number = 3) {
 		this.RETRY_ATTEMPT = retry;
 	}
 
 	/**
-     * Sets the cache expiration time in milliseconds.
-     * @param exp The cache expiration time in milliseconds.
-     */
+	 * Sets the cache expiration time in milliseconds.
+	 * @param exp The cache expiration time in milliseconds.
+	 */
 	setCacheExp(exp: number) {
 		this.CACHE_EXP_IN_MILIS = exp;
 	}
