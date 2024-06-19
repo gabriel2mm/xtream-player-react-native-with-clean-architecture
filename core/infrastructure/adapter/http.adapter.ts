@@ -1,11 +1,11 @@
-import IHttp from "@core/domain/interface/http.interface";
+import IHttpClient from "@core/domain/interface/adapter/http.interface";
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 
 /**
  * An adapter class implementing the IHttp interface.
  * This class provides HTTP request functionality using Axios library.
  */
-export class HttpAdapter implements IHttp {
+export default class HttpAdapter implements IHttpClient {
 
 	private axiosInstance: AxiosInstance;
 
@@ -20,6 +20,7 @@ export class HttpAdapter implements IHttp {
 	 * @returns A Promise resolving to the response data.
 	 * */
 	get<T>(url: string, config?: AxiosRequestConfig): Promise<T> {
+		console.log(url, config);
 		return this.axiosInstance.get(url, config);
 	}
 

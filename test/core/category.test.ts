@@ -5,8 +5,8 @@ import GetCategories from "@core/application/usecase/ get-categories.usecase";
 import CategoryService from "@core/infrastructure/service/category.service";
 import { CategoryEnum } from "@core/domain/enumerator/category.enum";
 import { ActionEnum } from "@core/domain/enumerator/action.enum";
-import AccountContext from "@core/infrastructure/context/account.context";
 import { accountFixture } from "../fixture/account.fixture";
+import AccountContext from "@core/infrastructure/context/account.context";
 
 describe("[usecase/categories]", () => {
 

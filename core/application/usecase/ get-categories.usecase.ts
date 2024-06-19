@@ -1,6 +1,6 @@
-import Category from "@core/domain/entity/category";
-import ICategoryService from "@core/domain/interface/category-service.interface";
-import IUseCase from "@core/domain/interface/usecase.interface";
+import IUseCase from "@core/domain/interface/usecase/usecase.interface";
+import Category from "@core/domain/entity/category/category";
+import ICategoryService from "@core/domain/interface/category/category-service.interface";
 import { ActionEnum } from "@core/domain/enumerator/action.enum";
 
 /**

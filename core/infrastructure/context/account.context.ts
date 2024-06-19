@@ -1,4 +1,4 @@
-import Account from "@core/domain/entity/account";
+import Account from "@core/domain/entity/account/account";
 import AccountMustBeProvidedException from "@core/domain/exceptions/account-must-be-provided.exception";
 
 /**

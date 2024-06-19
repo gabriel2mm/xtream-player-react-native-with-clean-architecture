@@ -1,12 +1,11 @@
-import IHttpCacheAdapter from '@core/domain/interface/http-cache.adapter';
+import IHttpCacheClient from '@core/domain/interface/adapter/http-cache.adapter';
 import ReactQueryFactory from '../factory/react-query.factory';
 import { QueryFunction } from '@tanstack/react-query';
-
 /**
  * An adapter class implementing the IHttpCacheAdapter interface.
  * This class provides caching functionality for HTTP requests using React Query library.
  */
-export default class HttpCacheAdapter implements IHttpCacheAdapter {
+export default class HttpCacheAdapter implements IHttpCacheClient {
 
 	private RETRY_ATTEMPT: number = 3;
 	private CACHE_EXP_IN_MILIS: number = 1000 * 60 * 60; //1 hour

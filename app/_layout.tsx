@@ -7,27 +7,13 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 import { Button } from 'react-native';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { TesteComponent } from './teste';
+import TesteComponent from './teste';
 
 const queryClient = ReactQueryFactory.getInstance();
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
 	
-
-	const [loaded] = useFonts({
-		SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-	});
-
-	useEffect(() => {
-		if (loaded) {
-			SplashScreen.hideAsync();
-		}
-	}, [loaded]);
-
-	if (!loaded) {
-		return null;
-	}
 
 	return (
 		<QueryClientProvider client={queryClient}>

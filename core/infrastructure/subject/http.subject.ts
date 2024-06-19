@@ -1,4 +1,4 @@
-import IHttpObserver from "@core/domain/interface/http-observer.interface";
+import IHttpObserver from "@core/domain/interface/observer/http-observer.interface";
 
 /**
  * A subject class responsible for notifying observers about HTTP-related events.

@@ -1,10 +1,10 @@
-import ICategoryService from "@core/domain/interface/category-service.interface";
-import IHttpCacheClient from "@core/domain/interface/http-cache.adapter";
-import IHttpClient from "@core/domain/interface/http.interface";
 import CategoriesLoadFailureException from "@core/domain/exceptions/categories-load-failure.exception";
-import Category from "@core/domain/entity/category";
 import { AxiosResponse } from "axios";
 import { ActionEnum } from "@core/domain/enumerator/action.enum";
+import Category from "@core/domain/entity/category/category";
+import IHttpCacheClient from "@core/domain/interface/adapter/http-cache.adapter";
+import IHttpClient from "@core/domain/interface/adapter/http.interface";
+import ICategoryService from "@core/domain/interface/category/category-service.interface";
 
 /**
  * A service class responsible for fetching categories based on a specified action.

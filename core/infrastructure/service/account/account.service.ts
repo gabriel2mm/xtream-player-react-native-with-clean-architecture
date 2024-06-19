@@ -1,13 +1,13 @@
-import Account from "@core/domain/entity/account";
-import IHttpClient from "@core/domain/interface/http.interface";
-import IHttpCacheClient from "@core/domain/interface/http-cache.adapter";
-import AccountContext from "../context/account.context";
+import Account from "@core/domain/entity/account/account";
+import AccountContext from "../../context/account.context";
 import LoginResult from "@core/application/dtos/login-result.dto";
-import IAccountService from "@core/domain/interface/account-service.interface";
 import LoginFailureException from "@core/domain/exceptions/login-failure.exception";
 import { AxiosResponse } from "axios";
 import ParametersInvalidException from "@core/domain/exceptions/parameters-invalid.exception";
-import HttpSubject from "../subject/http.subject";
+import HttpSubject from "../../subject/http.subject";
+import IAccountService from "@core/domain/interface/account/account-service.interface";
+import IHttpCacheClient from "@core/domain/interface/adapter/http-cache.adapter";
+import IHttpClient from "@core/domain/interface/adapter/http.interface";
 
 /**
  * A service class responsible for handling account-related operations.

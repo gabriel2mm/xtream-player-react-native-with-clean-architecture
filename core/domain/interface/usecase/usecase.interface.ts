@@ -1,3 +1,3 @@
 export default interface IUseCase<I, O> {
-	execute(param?: I): Promise<O>;
+	execute(...args: I[]): Promise<O>;
 }

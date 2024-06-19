@@ -1,7 +1,7 @@
 import LoginParams from "@core/application/dtos/login-params.dto";
-import IUseCase from "@core/domain/interface/usecase.interface";
-import IAccountService from "@core/domain/interface/account-service.interface";
-import Account from "@core/domain/entity/account";
+import IUseCase from "@core/domain/interface/usecase/usecase.interface";
+import Account from "@core/domain/entity/account/account";
+import IAccountService from "@core/domain/interface/account/account-service.interface";
 
 /**
  * A use case class responsible for handling user sign-in functionality.
